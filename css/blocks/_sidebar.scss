@@ -1,0 +1,54 @@
+@use '../media' as *;
+
+.sidebar {
+	padding-inline: 53px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include desktop-l {
+		display: none;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		column-gap: 100px;
+		row-gap: 100px;
+		writing-mode: vertical-lr;
+	}
+
+	&__title {
+		position: relative;
+		font-weight: 700;
+		font-size: 16px;
+		transform: rotate(-180deg);
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -85px;
+			right: 12px;
+			height: 70px;
+			width: 1px;
+			background-color: var(--color-dark);
+		}
+	}
+
+	&-soc1als {
+		&__list {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			column-gap: 15px;
+		}
+		&__item {
+			transform: rotate(-90deg);
+		}
+	}
+}

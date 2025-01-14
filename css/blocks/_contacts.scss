@@ -1,0 +1,27 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: flex-start;
+
+	&__description {
+		font-weight: 700;
+	}
+
+	&-soc1als {
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			column-gap: 25px;
+		}
+
+		&__link svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}

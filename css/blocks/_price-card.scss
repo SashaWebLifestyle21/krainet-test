@@ -1,0 +1,35 @@
+.price-card {
+	--sizeCircle: 15px;
+
+	padding-left: calc(var(--sizeCircle) + 10px);
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: calc((var(--sizeCircle) + 10px) * -1);
+			top: 4px;
+			width: var(--sizeCircle);
+			height: var(--sizeCircle);
+			background-color: var(--color-accent);
+			border-radius: 50%;
+		}
+	}
+
+	&__title,
+	&__value {
+		font-weight: 700;
+	}
+
+	&__description {
+		font-size: 12px;
+		font-weight: 500;
+	}
+}

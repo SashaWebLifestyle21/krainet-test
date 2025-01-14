@@ -1,0 +1,39 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.burger-button {
+	@include reset-button();
+
+	position: absolute;
+	content: '';
+	top: 20px;
+	right: 30px;
+	width: 36px;
+	height: 21px;
+	transform: translate(-50%, 50%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: end;
+
+	@include mobile-m {
+		right: 20px;
+	}
+
+	&__line {
+		display: block;
+		height: 3px;
+		width: 100%;
+		background-color: var(--color-dark);
+
+		&:first-child,
+		&:last-child {
+			width: 30px;
+		}
+	}
+
+	&:disabled {
+		opacity: 0.25;
+	}
+}

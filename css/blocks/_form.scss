@@ -1,0 +1,25 @@
+@use '../media' as *;
+
+.form {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+
+	&__inputs {
+		display: flex;
+		justify-content: center;
+		column-gap: 25px;
+		align-items: center;
+
+		@include mobile {
+			flex-direction: column;
+			row-gap: 29px;
+		}
+	}
+
+	&__button {
+		align-self: start;
+	}
+}

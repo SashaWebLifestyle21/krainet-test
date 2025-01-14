@@ -1,0 +1,77 @@
+@use '../media' as *;
+
+.skills-description {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 45px;
+		row-gap: 30px;
+	}
+
+	&__item {
+		--countItemsInRow: 3;
+		--borderHeight: 14px;
+		--percent: 100%;
+		--percentstr: '100%';
+
+		position: relative;
+		width: calc((100% - 90px - 32px) / var(--countItemsInRow));
+		height: 70px;
+		padding-top: 8px;
+		border-bottom: var(--borderHeight) solid var(--color-gray);
+		border-radius: 4px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: calc(var(--borderHeight) * -1);
+			left: 0;
+			background-color: var(--color-accent);
+			border-radius: 4px;
+			height: var(--borderHeight);
+			width: var(--percent);
+		}
+
+		&::after {
+			content: var(--percentstr);
+			position: absolute;
+			bottom: calc(var(--borderHeight) * -1);
+			top: 0;
+			right: 0;
+		}
+
+		&:nth-child(2) {
+			--percent: 85%;
+			--percentstr: '85%';
+		}
+
+		&:nth-child(3),
+		&:nth-child(5) {
+			--percent: 90%;
+			--percentstr: '90%';
+		}
+
+		&:nth-child(4) {
+			--percent: 75%;
+			--percentstr: '75%';
+		}
+
+		&:nth-child(6) {
+			--percent: 95%;
+			--percentstr: '95%';
+		}
+
+		@include tablet {
+			--countItemsInRow: 2;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		margin-left: 18px;
+	}
+}

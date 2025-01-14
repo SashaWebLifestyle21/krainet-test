@@ -1,0 +1,73 @@
+@use '../media' as *;
+
+.about {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	max-width: 570px;
+	width: 100%;
+
+	&__description {
+		font-weight: 500;
+	}
+
+	&-skills {
+		--gapWidth: 40px;
+
+		&__list {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			column-gap: 50px;
+			row-gap: 20px;
+
+			@include mobile-l {
+				flex-direction: column;
+			}
+		}
+		&__item {
+			width: calc((100% - 50px) / 2);
+
+			@include mobile-l {
+				width: 260px;
+			}
+		}
+	}
+
+	&-card {
+		display: flex;
+		column-gap: 25px;
+
+		&__image {
+			position: relative;
+			width: 36px;
+			height: 36px;
+			background-color: var(--color-accent);
+			border-radius: 50%;
+
+			& img {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				height: 25px;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			row-gap: 6px;
+			max-width: 200px;
+			width: 100%;
+		}
+
+		&__title {
+			font-weight: 700;
+		}
+
+		&__description {
+			font-weight: 500;
+			font-size: 12px;
+		}
+	}
+}

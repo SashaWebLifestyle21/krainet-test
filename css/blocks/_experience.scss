@@ -1,0 +1,38 @@
+@use '../media' as *;
+
+.experience {
+	@include tablet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include mobile-s {
+		justify-content: flex-end;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		@include desktop-l {
+			justify-content: center;
+			column-gap: 100px;
+		}
+
+		@include desktop {
+			justify-content: center;
+			column-gap: 50px;
+		}
+
+		@include tablet {
+			flex-direction: column;
+			row-gap: 40px;
+		}
+	}
+
+	&__item {
+		max-width: 425px;
+		width: 100%;
+	}
+}

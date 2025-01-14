@@ -1,0 +1,39 @@
+@use '../media' as *;
+
+.stack {
+	&__list {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		gap: 13px;
+	}
+
+	&__item {
+		--countItemsInRow: 4;
+
+		width: calc((100% - 36px - 32px) / var(--countItemsInRow));
+
+		@include tablet {
+			--countItemsInRow: 3;
+		}
+
+		@include mobile {
+			--countItemsInRow: 2;
+		}
+
+		@include mobile-l {
+			width: 100%;
+		}
+	}
+
+	&-card {
+		padding: 25px;
+		border: 1px solid var(--color-dark);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: end;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}

@@ -1,0 +1,20 @@
+@use '../media' as *;
+
+.price {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include mobile {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		max-width: 366px;
+		width: 100%;
+	}
+}

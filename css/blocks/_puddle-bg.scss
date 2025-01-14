@@ -1,0 +1,32 @@
+.puddle-bg {
+	&-center,
+	&-start {
+		position: relative;
+
+		&::after {
+			--diameterCircle: 36px;
+
+			content: '';
+			position: absolute;
+			width: var(--diameterCircle);
+			height: var(--diameterCircle);
+			border-radius: 50%;
+			background-color: var(--color-accent);
+			z-index: -1;
+		}
+	}
+
+	&-center {
+		&::after {
+			top: calc(50% - var(--diameterCircle) / 2);
+			left: calc(50% - var(--diameterCircle) / 2);
+		}
+	}
+
+	&-start {
+		&::after {
+			top: -5px;
+			left: -12px;
+		}
+	}
+}

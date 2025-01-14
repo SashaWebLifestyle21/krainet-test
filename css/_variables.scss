@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+@use 'media' as *;
+
+:root {
+	--color-dark: #000000;
+	--color-light: #ffffff;
+	--color-accent: #ffa501;
+	--color-red: #ff5500;
+	--color-gray: #e8e4de;
+
+	--font-family-base: 'Poppins', sans-serif;
+
+	--container-width: 1140px;
+	--container-padding-x: 16px;
+
+	--transition-duration: 0.2s;
+
+	@include mobile-m {
+		--container-padding-x: 10px;
+	}
+}

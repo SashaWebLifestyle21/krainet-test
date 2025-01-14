@@ -1,0 +1,14 @@
+@use '../media' as *;
+
+.fibo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 20px;
+	padding-bottom: 50px;
+
+	@include mobile-m {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}

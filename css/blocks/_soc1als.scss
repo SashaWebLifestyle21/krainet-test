@@ -1,0 +1,17 @@
+.soc1als {
+	&__list,
+	&__list-rotate {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 15px;
+	}
+
+	&__list-rotate {
+		flex-direction: row-reverse;
+	}
+
+	&__item-rotate {
+		transform: rotate(-90deg);
+	}
+}
