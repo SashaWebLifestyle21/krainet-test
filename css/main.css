@@ -469,7 +469,7 @@ textarea {
 
 .hero {
   position: relative;
-  background: url(../../images/background.jpg) no-repeat;
+  background: url(../images/background.jpg) no-repeat;
   background-size: cover;
   min-height: 800px;
   background-position: center;
